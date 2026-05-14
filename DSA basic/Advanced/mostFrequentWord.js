@@ -1,7 +1,33 @@
-function mostFrequentWord(str) {
-    // Write your code here
-}
+// function mostFrequentWord(str) {
+//     str = str.split(" ")
+//     let obj = {}
+//     let max = 0
+//     let maxStr = ""
+//     for (let word of str) {
+//         obj[word] = (obj[word] ?? 0) + 1
 
+//         if (obj[word] > max) {
+//             max = obj[word]
+//             maxStr = word
+//         }
+//     }
+//     return maxStr
+// }
+
+function mostFrequentWord(str) {
+    str = str.split(" ")
+    let map = new Map()
+    let max = 0;
+    let maxStr = ""
+    for (let word of str) {
+        map.set(word, (map.get(word) ?? 0) + 1)
+        if (map.get(word) > max) {
+            max = map.get(word)
+            maxStr = word
+        }
+    }
+    return maxStr
+}
 
 
 // Test Case 1
