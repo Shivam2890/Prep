@@ -1,15 +1,15 @@
-// function groupByRole(arr) {
-//     let result = {}
-//     for (let item of arr) {
-//         let role = item.role
-//         if (!result[role]) {
-//             result[role] = []
-//         }
-//         result[role].push(item)
+function groupByRole(arr) {
+    let result = {}
+    for (let item of arr) {
+        let role = item.role
+        if (!result[role]) {
+            result[role] = []
+        }
+        result[role].push(item)
 
-//     }
-//     return result
-// }
+    }
+    return result
+}
 
 // console.log(groupByRole(
 //     [
@@ -44,13 +44,13 @@
 //     ]
 // ))
 
-function groupByRole(arr){
-    return arr.reduce((acc,item) => {
-        acc[item.role] ??=[];
-        acc[item.role].push(item);
-        return acc
-    } , {})
-}
+// function groupByRole(arr){
+//     return arr.reduce((acc,item) => {
+//         acc[item.role] ??=[];
+//         acc[item.role].push(item);
+//         return acc
+//     } , {})
+// }
 
 console.log(groupByRole(
     [
